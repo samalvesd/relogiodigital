@@ -1,8 +1,8 @@
 function relogio(){
     const data = new Date();
-    const hora = data.getHours();
-    const min = data.getMinutes();
-    const seg = data.getSeconds();
+    let hora = data.getHours();
+    let min = data.getMinutes();
+    let seg = data.getSeconds();
 
     if (hora < 10) {
         hora = `0${hora}`;
@@ -14,7 +14,7 @@ function relogio(){
         seg = `0${seg}`;
     }
 
-    const formatHora = `${hora}: ${min}: ${seg}`;
+    const formatHora = `${hora}:${min}:${seg}`;
     document.getElementById("rel").value=formatHora;
 }
     
